@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        .button-back-link{
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #202020;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-back-link:hover{
+            background-color: #404040; /* Darker green on hover */
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../IT2805_assigment3/responsive.html" class="button-back-link">Back</a>
+
+    <div class="content">
+        <h1>Welcome to the Sign Up Page</h1>
+    </div>
+
+    <label for="whole_name">Whole Name: </label>
+    <input type="text"  name="whole_name" required/>
+
+    <label for="email">Email: </label>
+    <input type="email" name="email" required/>
+
+    <label for="password">Password: </label>
+    <input type="password" minlength="8" name="password" required/>
+    <small>Password must be at least 8 characters long.</small>
+
+    <label for="phone_number">Phone Number: </label>
+    <input type="tel" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(123) 456-7890" id="3" name="phone_number" required/>
+
+    <label for="birthdate">Birthday: </label>
+    <input type="date" name="birthdate" required/>
+
+    <label for="country">Country<span class="required">*</span>:</label>
+    <br>
+    <select name="country" required><br>
+    <option value="">--Select Your Country--</option><br>
+    <option value="china">China</option><br>
+    <option value="japan">Japan</option><br>
+    <option value="russia">Russia</option><br>
+    <option value="us">United States</option><br>
+    <option value="norway">Norway</option><br></select><br>
+
+    <label for="gender">Country: </label>
+    <br>
+    <input type="radio" name="gender" value="male" required> Male<br>
+    <input type="radio" name="gender" value="female" required> Female<br>
+    <input type="radio" name="gender" value="gay" required> Gay<br>
+
+    <label>Interests:</label>
+    <br>
+    <input type="checkbox" name="interests" value="sports"> Eating<br>
+    <input type="checkbox" name="interests" value="reading"> Sleeping<br>
+    <input type="checkbox" name="interests" value="traveling"> Coding<br>
+
+
+    <textarea name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+
+    <input type="range" name="satisfaction" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value"> <output>5</output>
+
+    <input type="file" name="profile_picture" accept="image/*">
+
+    <script>
+        function focusNextInput(current, next) {
+            current.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    next.focus();
+                }
+            });
+        }
+
+        const whole_name = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+        const input3 = document.getElementById("input3");
+
+        focusNextInput(input1, input2);
+        focusNextInput(input2, input3);
+    </script>
+
+</body>
+</html>
