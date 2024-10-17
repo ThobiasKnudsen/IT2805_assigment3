@@ -102,6 +102,7 @@
         <h1>Please sign up, bitch</h1>
     </div>
     <div class = "content">
+    <form>
         <div class ="paragraph1">
             <!-- <label for="whole_name">Whole Name: </label> -->
             <input type="text"  placeholder="Whole Name"name="whole_name" required/>
@@ -132,7 +133,8 @@
             <option value="japan">Japan</option><br>
             <option value="russia">Russia</option><br>
             <option value="us">United States</option><br>
-            <option value="norway">Norway</option><br></select><br>
+            <option value="norway">Norway</option><br>
+            <option value="space">Outer space</option><br></select><br>
             </div>  
     </div>
     <div class="paragraph3">
@@ -140,7 +142,7 @@
             <label for="gender">Gender: </label> <br> 
             <input type="radio" name="gender" value="male" required> Male<br>
             <input type="radio" name="gender" value="female" required> Female<br>
-            <input type="radio" name="gender" value="gay" required> Gay<br>
+            <input type="radio" name="gender" value="mega gay" required> Gay<br>
         </div>
         <div class="interests">
             <label>Interests:</label>
@@ -156,6 +158,9 @@
         <input type="range" name="satisfaction" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value"> <output>5</output>
         
         <input type="file" name="profile_picture" accept="image/*">
+        <input type="reset">
+        <input id = "submitbut" type="submit" value="Submit sign up form">
+    </form>
     </div>
     <script>
         function focusNextInput(current, next) {
