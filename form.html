@@ -24,6 +24,7 @@
         }
         .content {
             padding: 20px;
+            background-color: lightblue;
         }
         .country
         {
@@ -39,28 +40,57 @@
             padding: 10px
         }
         .paragraph1{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .password{  
             
             display: flex;
             flex-direction: row;
-            fle
-            border-style: dotted;
-            
+            justify-content: center;
+            align-items: center;
             
         }
-        .password{   
-            border-style: dotted;
-            margin:auto; 
+        .paragraph2
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
-        
+        .country
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .paragraph3
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .paragraph4
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
 
     <a href="../IT2805_assigment3/responsive.html" class="button-back-link">Back</a>
 
-    <div class="content">
+    <div class="Header">
         <h1>Welcome to the Sign Up Page</h1>
     </div>
+    <div class = "content">
     <div class ="paragraph1">
         <!-- <label for="whole_name">Whole Name: </label> -->
         <input type="text"  placeholder="Whole Name"name="whole_name" required/>
@@ -69,14 +99,16 @@
         <input type="email" placeholder="Your Email"name="email" required/>
 
         <!-- <label for="phone_number">Phone Number: </label> -->
-    <input type="tel" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="Phone: (123) 456-7890" id="3" name="phone_number" required/>
+        <input type="tel" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="Phone: (123) 456-7890" id="3" name="phone_number" required/>
     </div>
     <div class="password">
-        <!-- <label for="password">Password: </label> -->
-        <input type="password" placeholder="Password"minlength="8" name="password" required/>
-        <small>Password must be at least 8 characters long.</small>
+        <div>
+            <!-- <label for="password">Password: </label> -->
+            <input type="password" placeholder="Password"minlength="8" name="password" required/>
+            <small>Password must be at least 8 characters long.</small>
+        </div>
     </div>
-    <div>
+    <div class = "paragraph2">
         <label for="birthdate">Birthday: </label>
         <input type="date" name="birthdate" required/>
     </div>
@@ -92,29 +124,28 @@
             <option value="norway">Norway</option><br></select><br>
             </div>  
     </div>
-    <div>
-        
+    <div class="paragraph3">
         <div class ="gender">
-        <label for="gender">Gender: </label> <br> 
-        <input type="radio" name="gender" value="male" required> Male<br>
-        <input type="radio" name="gender" value="female" required> Female<br>
-        <input type="radio" name="gender" value="gay" required> Gay<br>
+            <label for="gender">Gender: </label> <br> 
+            <input type="radio" name="gender" value="male" required> Male<br>
+            <input type="radio" name="gender" value="female" required> Female<br>
+            <input type="radio" name="gender" value="gay" required> Gay<br>
         </div>
         <div class="interests">
             <label>Interests:</label>
         <br>
-        <input type="checkbox" name="interests" value="sports"> Eating<br>
-        <input type="checkbox" name="interests" value="reading"> Sleeping<br>
-        <input type="checkbox" name="interests" value="traveling"> Coding<br>
+            <input type="checkbox" name="interests" value="sports"> Eating<br>
+            <input type="checkbox" name="interests" value="reading"> Sleeping<br>
+            <input type="checkbox" name="interests" value="traveling"> Coding<br>
         </div>
     </div>
-
-    <textarea name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
-    <br>
-    <input type="range" name="satisfaction" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value"> <output>5</output>
-
-    <input type="file" name="profile_picture" accept="image/*">
-
+    <div class = "paragraph4">
+        <textarea name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+        
+        <input type="range" name="satisfaction" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value"> <output>5</output>
+        
+        <input type="file" name="profile_picture" accept="image/*">
+    </div>
     <script>
         function focusNextInput(current, next) {
             current.addEventListener('keydown', function(event) {
