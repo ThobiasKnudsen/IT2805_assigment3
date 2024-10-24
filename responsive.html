@@ -67,15 +67,21 @@
         .button-link:hover {
             background-color: #0056b3;
         }
-        @media screen and (max-width: 1080px) {
-          .features
-          {
+        img
+        {
+          max-width: 95%;
+          max-height: 95%;
+        }
+        @media screen and (max-width: 1080px) /*sub 1080 width  */
+        { 
+          .features{
             margin:auto;
-            
-            display:block;
+            font-size: xx-large;
+            display:flexbox;
+            flex-direction: column;
           }
-          .feature-item
-          {
+          .feature-item{
+            font-size: larger;
             margin:auto;
             width: 90%;
           }
@@ -84,18 +90,17 @@
             margin:auto;
             margin-right: 10px;
           }
-          a
-          {
+          a{
             display: block;
             padding: 10px;
-          }
-          
-      }
+            font-size: xx-large;
+          }  
+        }
     </style>
 </head>
 <body>
   <header>
-    <h1>Please Sign Up Please</h1>
+    <h1>Please Sign Up now mudafukka</h1>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -110,26 +115,29 @@
   </header>
   <main>
     <section class="intro">
-      <h2>Welcome to our site</h2>
-      <p>We provide a place for you to waste your time so that we earn money</p>
+      <h2>Welcome to </h2>
+      <p>We tailor kitchen solutions for your needs. Sign up today for a free consultation</p>
     </section>
     <section class="features">
       <div class="feature-item">
-        <h3>Feature 1</h3>
-        <p>Description of feature 1.</p>
+        <h3>Perfect for small people</h3>
+        <p>Our kitchens are perfect for people of low height, such as children or wheelchair users</p>
+        <img src="overview.jpg" alt="">
       </div>
       <div class="feature-item">
-        <h3>Feature 2</h3>
-        <p>Description of feature 2.</p>
+        <h3>Feature rich</h3>
+        <p>Our kitchen solutions have all you need, from stove, to towel rack, to ice machine</p>
+        <img src="content.jpg" alt="">
       </div>
       <div class="feature-item">
-        <h3>Feature 3</h3>
-        <p>Description of feature 3.</p>
+        <h3>Utensils</h3>
+        <p>Included are many of the most neccesary kitchen tools, so you can start cooking right out of the box</p>
+        <img src="accsesories.jpg" alt="">
       </div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 Responsive Website</p>
+    <p>&copy; 2024 Tiny Kitchens for tiny humans</p>
   </footer>
 </body>
 </html>
