@@ -44,6 +44,7 @@
             padding: 20px;
             border: 1px solid #ddd;
             width: 30%;
+            display: flexbox;
         }
         footer {
             text-align: center;
@@ -66,11 +67,35 @@
         .button-link:hover {
             background-color: #0056b3;
         }
+        @media screen and (max-width: 1080px) {
+          .features
+          {
+            margin:auto;
+            
+            display:block;
+          }
+          .feature-item
+          {
+            margin:auto;
+            width: 90%;
+          }
+          nav ul li {
+            display: block;
+            margin:auto;
+            margin-right: 10px;
+          }
+          a
+          {
+            display: block;
+            padding: 10px;
+          }
+          
+      }
     </style>
 </head>
 <body>
   <header>
-    <h1>Please Sign Up So That We Can Sell You</h1>
+    <h1>Please Sign Up Please</h1>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
